@@ -1,5 +1,7 @@
 <?php
-include("../redis.php");
+
+include(__DIR__ ."/../redis.php");
+
 $redis->hset("user:".$_SESSION['nickname'], "last_seen", time());
 
 $cFID = $_SESSION['cFID'];

@@ -4,7 +4,7 @@ session_start();
 
 
 
-if(isset($_SESSION['nickname']) && $_SESSION['color'] && $_SESSION['id']){
+if(isset($_SESSION['nickname']) && $_SESSION['color']){
     header("Location: index.php");
 }
 
@@ -21,8 +21,8 @@ if(isset($_SESSION['nickname']) && $_SESSION['color'] && $_SESSION['id']){
 </head>
 <body style="background-color: black;overflow: auto;">
     <div class="login_container">
-    	<span class="h3_head" style="font-family: 'Courier New', Courier, monospace;">Hacking,programing,linux,etc . . .</span>
-        <div class="title h1_head">Welcome To F### Chat</div>
+    	<span class="h3_head" style="font-family: 'Courier New', Courier, monospace;color: red;text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red;">This is for testing purposes and to collect users' experiences. For now, you cannot create private channels, only public channels. The app will only run for a specific period initially, and after that, it will run 24/7 Day.</span>
+        <div class="title h1_head">Welcome To FChat</div>
 
         <div class="login_form" style="height: 29vh;">
             <form action="proccess/loginprocess.php" method="POST">

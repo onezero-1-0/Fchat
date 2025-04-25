@@ -6,7 +6,7 @@ $privilege = $_SESSION['privilage'] ?? 4;
 $superUser = false;
 $admin = false;
 $moderator = false;
-$symbol = $_SESSION['symbol'] ?? "";
+$symbol = $_SESSION['symbol'];
 
 switch($privilege){
     case 1:

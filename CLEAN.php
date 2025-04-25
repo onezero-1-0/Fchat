@@ -54,7 +54,7 @@ function removeUserFromRedis($redis, $username) {
 }
 
 
-$threshold = time() - 20;
+$threshold = time() - 60;
 
 $allKeys = $redis->keys("user:*"); // Get all keys starting with "user:"
 $userKeys = array_filter($allKeys, function($key) {

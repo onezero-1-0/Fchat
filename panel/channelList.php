@@ -1,6 +1,4 @@
-<?php 
-session_start();
-
+<?php
 //functions
 
 function getChannels(){
@@ -9,6 +7,7 @@ function getChannels(){
         return json_decode($channels, true);
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,9 +23,11 @@ function getChannels(){
     <div class="channel_container">
     <?php
     $channels = getChannels();
-        
+    
     foreach ($channels as $channel) {
-        echo '<a target="_top" href="/index.php?action=channel&cFID='. $channel .'"><div class="channel">'. $channel .'</div></a>';
+    	if($channel != "MAJOR"){
+        	echo '<a target="_top" href="/index.php?action=channel&cFID='. $channel .'"><div class="channel">'. $channel .'</div></a>';
+        }
     }
     ?>
     </div>
