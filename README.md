@@ -94,10 +94,10 @@ Open your crontab editor by running:
 crontab -e
 ```
 
-Add the cron line at the bottom of the file (replace /usr/bin/php and /path/to/Fchat with your actual paths):
+Add the cron line at the bottom of the file (replace /usr/bin/php and /var/www/html/ with your actual paths):
 
 ```
-* * * * * /usr/bin/php /path/to/Fchat/CLEAN.php
+* * * * * /usr/bin/php /var/www/html/CLEAN.php
 ```
 
 Save and exit. The system will run the CLEAN.php script every minute automatically.
