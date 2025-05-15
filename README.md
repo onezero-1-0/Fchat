@@ -18,20 +18,6 @@ Fchat is meticulously crafted to function seamlessly over the Tor network. By el
 - **Admin Panel**: Administrative interface for managing users and messages.
 - **Redis Integration**: Utilizes Redis for caching and session storage to enhance performance.
 
-## 🗂️ Project Structure
-
-Fchat/
-├── api/ # Backend API endpoints
-├── panel/ # Admin dashboard
-├── proccess/ # Session and authentication scripts
-├── static/ # Static assets (CSS)
-├── grep/ # Log analysis / utility scripts
-├── CLEAN.php # Cleanup script
-├── endsession.php # Session termination script
-├── index.php # Application entry point
-├── login.php # User login interface
-├── logout.php # Logout handler
-├── redis.php # Redis configuration
 
 ## 🛠️ Technologies Used
 
@@ -98,8 +84,25 @@ Edit `redis.php`:
 $redis = new Redis();
 $redis->connect('127.0.0.1', 6379);
 ```
+### 5. Set up Cron Job for Session Cleanup
 
-### 5. (Optional) Set Up Tor Hidden Service
+To handle users who close the browser without logging out, you must run CLEAN.php periodically to clean inactive sessions and logout users automatically.
+
+Open your crontab editor by running:
+
+```bash
+crontab -e
+```
+
+Add the cron line at the bottom of the file (replace /usr/bin/php and /path/to/Fchat with your actual paths):
+
+```
+* * * * * /usr/bin/php /path/to/Fchat/CLEAN.php
+```
+
+Save and exit. The system will run the CLEAN.php script every minute automatically.
+
+### 6. (Optional) Set Up Tor Hidden Service
 
 Install Tor:
 
@@ -132,7 +135,7 @@ Get your .onion address:
 sudo cat /var/lib/tor/fchat_hidden/hostname
 ```
 
-### 6. Run the Application
+### 7. Run the Application
 
 Open your browser (Tor Browser recommended) and go to:
 
