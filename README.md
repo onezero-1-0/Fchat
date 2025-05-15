@@ -144,10 +144,7 @@ Open your browser (Tor Browser recommended) and go to:
 
 Fchat is now ready for secure, JS-free messaging over the web or Tor.
 
-🤝 Contributing
-Contributions are welcome! Feel free to fork this repository and open a pull request with your improvements or bug fixes.
-
 📄 License
 This project is licensed under the MIT License.
 
-Let me know if you'd like me to include installation instructions for running it as a Tor hidden service or a `.onion` domain setup.
+⚠️ Note: This project is under active development and may contain some bugs. Features like automatic logout cleanup are implemented but might need fixes. Feel free to use it as-is and update it with your own improvements!
