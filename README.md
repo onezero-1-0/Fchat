@@ -46,15 +46,16 @@ Fchat/
 
 ```bash
 git clone https://github.com/onezero-1-0/Fchat.git
-2. Set Up the Environment
+```
+### 2. Set Up the Environment
 Make sure PHP and Redis are installed.
 
 Configure your web server to serve the Fchat application.
 
-3. Configure Redis
+### 3. Configure Redis
 Edit redis.php with your Redis server connection details.
 
-4. Run the Application
+### 4. Run the Application
 Access index.php in your browser (Tor Browser recommended) to start using Fchat.
 
 🤝 Contributing
